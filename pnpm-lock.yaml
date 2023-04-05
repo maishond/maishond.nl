@@ -5,10 +5,12 @@ specifiers:
   '@astrojs/tailwind': ^3.1.1
   '@react-three/drei': ^9.62.2
   '@react-three/fiber': ^8.12.0
+  '@react-three/postprocessing': ^2.7.1
   '@types/react': ^18.0.21
   '@types/react-dom': ^18.0.6
   '@types/three': ^0.150.1
   astro: ^2.1.9
+  maath: ^0.5.3
   react: ^18.0.0
   react-dom: ^18.0.0
   tailwindcss: ^3.0.24
@@ -19,10 +21,12 @@ dependencies:
   '@astrojs/tailwind': 3.1.1_lb4ceowfm56hgzfjjkqijna7me
   '@react-three/drei': 9.62.2_rux6wpbn3dc5pm25cuo5l3d4py
   '@react-three/fiber': 8.12.0_42od2y7wbz57ukb7jorrhqe6ja
+  '@react-three/postprocessing': 2.7.1_ao53a3fyxbyom2jjccsvuhmlra
   '@types/react': 18.0.33
   '@types/react-dom': 18.0.11
   '@types/three': 0.150.1
   astro: 2.1.9
+  maath: 0.5.3_jsdnc4bsbm2fhlfubov6cuno6m
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   tailwindcss: 3.3.1
@@ -836,6 +840,22 @@ packages:
       suspend-react: 0.0.8_react@18.2.0
       three: 0.151.3
       zustand: 3.7.2_react@18.2.0
+    dev: false
+
+  /@react-three/postprocessing/2.7.1_ao53a3fyxbyom2jjccsvuhmlra:
+    resolution: {integrity: sha512-FhmQB7INWKaecxq8u155cpbPWM2AM9SDazGmHMsW1r0IZy5aqsI1IWCxA+jJD1V7p6y0zXabssEqZ7JaANkiig==}
+    peerDependencies:
+      '@react-three/fiber': '>=7.0'
+      react: '>=17.0'
+      three: '>=0.136.0'
+    dependencies:
+      '@react-three/fiber': 8.12.0_42od2y7wbz57ukb7jorrhqe6ja
+      postprocessing: 6.30.2_three@0.151.3
+      react: 18.2.0
+      react-merge-refs: 1.1.0
+      screen-space-reflections: 2.5.0_sofrvuaqkglosgh7c62oaqijnq
+      three: 0.151.3
+      three-stdlib: 2.21.8_three@0.151.3
     dev: false
 
   /@types/babel__core/7.20.0:
@@ -2888,6 +2908,15 @@ packages:
       source-map-js: 1.0.2
     dev: false
 
+  /postprocessing/6.30.2_three@0.151.3:
+    resolution: {integrity: sha512-Vt77s5DkHyUOV4bmk10J46DHJLglBfIo9ARPI0o62UIAx9omANfuPJTKiLVoYlC1ApkV9y3ldBDipF3IldB7YA==}
+    engines: {node: '>= 0.13.2'}
+    peerDependencies:
+      three: '>= 0.138.0 < 0.152.0'
+    dependencies:
+      three: 0.151.3
+    dev: false
+
   /potpack/1.0.2:
     resolution: {integrity: sha512-choctRBIV9EMT9WGAZHn3V7t0Z2pMQyl0EZE6pFc/6ml3ssw7Dlf/oAOvFwjm1HVsqfQN8GfeFyJ+d8tRzqueQ==}
     dev: false
@@ -3218,6 +3247,16 @@ packages:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
+
+  /screen-space-reflections/2.5.0_sofrvuaqkglosgh7c62oaqijnq:
+    resolution: {integrity: sha512-fWSDMhJS0xwD3LTxRRch7Lb9NzxsR66sCmtDmAA7i+OGnghUrBBsrha85ng7StnCBaLq/BKmZ97dLxWd1XgWdQ==}
+    peerDependencies:
+      postprocessing: '>=6.28.0'
+      three: '>=0.141.0'
+    dependencies:
+      postprocessing: 6.30.2_three@0.151.3
+      three: 0.151.3
     dev: false
 
   /section-matter/1.0.0:

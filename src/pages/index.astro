@@ -1,5 +1,5 @@
 ---
-import Counter from "../components/counter";
+import Maishond from "../components/Maishond";
 ---
 
 <html lang="en">
@@ -11,7 +11,12 @@ import Counter from "../components/counter";
     <title>Astro</title>
   </head>
   <body>
-    <h1>Astro</h1>
-    <Counter client:load />
+    <div class="relative w-full h-screen">
+      <div
+        class="absolute inset-0 bg-gradient-to-t to-pink-300 from-orange-600"
+      >
+        <Maishond client:load />
+      </div>
+    </div>
   </body>
 </html>
